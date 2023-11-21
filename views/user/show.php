@@ -18,6 +18,7 @@ $result = $connexion->query($sql);
 
 <body>
     <div class="container">
+        <a href="create.php">new user</a>
         <table class="table">
             <thead>
                 <tr>

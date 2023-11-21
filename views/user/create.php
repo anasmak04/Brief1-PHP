@@ -41,6 +41,8 @@ if (isset($_POST['submit'])) {
 
     <div class="container mt-4">
 
+    <a href="show.php">view all users</a>
+
         <h1 class="text-capitalize text-center">user management system </h1>
         <p class="text-capitalize text-center">insert a values from user</p>
         <form action="create.php" method="post">
