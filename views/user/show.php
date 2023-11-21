@@ -1,13 +1,9 @@
 <?php
-
 include '../../database/DbConnection.php';
+
 $sql = "SELECT * FROM user";
 $result = $connexion->query($sql);
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +14,9 @@ $result = $connexion->query($sql);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>View users</title>
-
-
 </head>
 
 <body>
-
-
     <div class="container">
         <table class="table">
             <thead>
@@ -38,17 +30,25 @@ $result = $connexion->query($sql);
             </thead>
             <tbody>
                 <?php
-
-                $r = $result->fetch_assoc();
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
                 ?>
-                <td><?php echo $r['id']; ?></td>
-                <td><?php echo $r['firstName']; ?></td>
-                <td><?php echo $r['lastName']; ?></td>
-                <td><?php echo $r['email']; ?></td>
-                <td>
-                    <a href="edit.php?id=<?php $r['id'] ?>" class="btn btn-warning">update</a>
-                    <a href="delete.php?id=<?php $r['id'] ?>" class="btn btn-danger">delete</a>
-                </td>
+                        <tr>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['firstName']; ?></td>
+                            <td><?php echo $row['lastName']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td>
+                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Update</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                            </td>
+                        </tr>
+                <?php
+                    }
+                } else {
+                    echo "No users found";
+                }
+                ?>
             </tbody>
         </table>
     </div>
