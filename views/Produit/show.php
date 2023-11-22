@@ -52,6 +52,7 @@ $result1 = $connexion->query($sql1);
                             <p class="card-text"><?= $row['description'] ?></p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             <a href="delete.php?id=<?= $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure do you want to delete this user?')">Delete</a>
+                            <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-warning">Update</a>
                         </div>
                     </div>
                     <br>

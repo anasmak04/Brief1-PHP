@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $id_produit = $_POST['id_produit'];
     $nom_produit = $_POST['nom_produit'];
     $description_produit = $_POST['description_produit'];
-    $id_category_produit = $_POST['id_category_produit']; // Changed the name to avoid conflicts
+    $id_category_produit = $_POST['id_category_produit']; 
 
     $sql1 = "INSERT INTO `category` (id, nom) VALUES ('$id_category', '$nom_category')";
     $result1 = $connexion->query($sql1);
