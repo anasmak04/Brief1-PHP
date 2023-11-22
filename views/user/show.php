@@ -45,7 +45,7 @@ $result = $connexion->query($sql);
                             <td><?php echo $row['email']; ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Update</a>
-                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure do you want to delete this user?')">Delete</a>
                             </td>
                         </tr>
                 <?php

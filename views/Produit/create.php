@@ -1,27 +1,28 @@
 <?php
-
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
-    $id_category = $_POST['id'];
+    $id_category = $_POST['id_category'];
     $nom_category = $_POST['nom_category'];
     $id_produit = $_POST['id_produit'];
     $nom_produit = $_POST['nom_produit'];
     $description_produit = $_POST['description_produit'];
+    $id_category_produit = $_POST['id_category_produit']; // Changed the name to avoid conflicts
 
-    $sql1 = "INSERT INTO `category` VALUES('$id_category','$nom_category')";
-    $result = $connexion->query($sql1);
-    $sql = "INSERT INTO `produit` VALUES ('$id_produit','$nom_produit','$description_produit','$id_category')";
-    $result = $connexion->query($sql);
+    $sql1 = "INSERT INTO `category` (id, nom) VALUES ('$id_category', '$nom_category')";
+    $result1 = $connexion->query($sql1);
 
-    if (isset($result)) {
-        header('location:');
+    $sql2 = "INSERT INTO `produit` (id, nom, description, id_category) VALUES ('$id_produit', '$nom_produit', '$description_produit', '$id_category_produit')";
+    $result2 = $connexion->query($sql2);
+
+    if ($result1 && $result2) {
+        header('location: show.php');
     } else {
-        echo "error from insert produit" . $connexion->error;
+        echo "Error from insert produit" . $connexion->error;
     }
 }
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -42,45 +43,16 @@ if (isset($_POST['submit'])) {
         <h1 class="text-capitalize text-center">Product management system </h1>
         <p class="text-capitalize text-center">insert new product by category</p>
         <form action="create.php" method="post">
-            <div class="row">
-                <div class="col">
-                    <input type="number" name="id" class="form-control" placeholder="Id category">
-                </div>
-                <div class="col">
-                    <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
-                </div>
+    <input type="number" name="id_category" class="form-control" placeholder="Id category">
+    <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
+    <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
+    <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
+    <input type="text" name="description_produit" class="form-control" placeholder="Description Product">
+    <input type="number" name="id_category_produit" class="form-control" placeholder="Id Category for Product">
 
-            </div>
+    <button type="submit" name="submit" class="btn btn-primary mt-4">Submit</button>
+</form>
 
-            <div class="row mt-4">
-                <div class="col">
-                    <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
-                </div>
-                <div class="col">
-                    <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
-                </div>
-
-            </div>
-
-            <div class="row mt-4">
-                <div class="col">
-                    <input type="text" name="id_category" class="form-control" placeholder="id category">
-
-
-                </div>
-
-
-                <div class="row mt-4">
-                    <div class="col">
-                        <textarea placeholder="product description" name="description_produit" style="padding:15px;" id="" cols="174" rows="10"></textarea>
-                    </div>
-
-
-                </div>
-                <div class="row mt-4">
-
-                    <button type="submit" name="submit" class="btn btn-primary mt-4 ">Sign in</button>
-        </form>
     </div>
     </div>
 </body>
