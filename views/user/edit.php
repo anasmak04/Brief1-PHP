@@ -12,13 +12,11 @@ if (isset($_POST['submit'])) {
 
     $result = $connexion->query($sql);
 
-    if ($result === TRUE) {
-        echo "User updated successfully.";
+    if (isset($result)) {
+        header('location:show.php');
     } else {
         echo "Error: " . $sql . "<br>" . $connexion->error;
     }
-
-    
 }
 
 ?>

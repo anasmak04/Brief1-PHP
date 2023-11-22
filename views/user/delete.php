@@ -11,6 +11,9 @@ if (isset($_GET['id'])) {
     } else {
         echo "Error: " . $sql . "<br>" . $connexion->error;
     }
+
+
+    header('location:show.php');
 }
 ?>
 

@@ -14,8 +14,9 @@ if (isset($_POST['submit'])) {
 
     $result = $connexion->query($sql);
 
-    if ($result === TRUE) {
-        echo "New user created successfully.";
+    if (isset($result)) {
+        header("location:show.php");
+        
     } else {
         echo "Error: " . $connexion->error;
     }
@@ -41,7 +42,7 @@ if (isset($_POST['submit'])) {
 
     <div class="container mt-4">
 
-    <a href="show.php">view all users</a>
+    <a href="show.php" class="btn btn-primary">view all users</a>
 
         <h1 class="text-capitalize text-center">user management system </h1>
         <p class="text-capitalize text-center">insert a values from user</p>

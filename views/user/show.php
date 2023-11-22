@@ -3,6 +3,7 @@ include '../../database/DbConnection.php';
 
 $sql = "SELECT * FROM user";
 $result = $connexion->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,9 @@ $result = $connexion->query($sql);
 
 <body>
     <div class="container">
-        <a href="create.php">new user</a>
+        <div class="m-4">
+        <a href="create.php" class="btn btn-primary">new user</a>
+        </div>
         <table class="table">
             <thead>
                 <tr>
@@ -31,6 +34,7 @@ $result = $connexion->query($sql);
             </thead>
             <tbody>
                 <?php
+                 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                 ?>
