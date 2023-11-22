@@ -64,7 +64,7 @@
         <ul class="nav nav-pills nav-stacked">
           <li class="active"><a href="#section1">Dashboard</a></li>
           <li><a href="./views/user/show.php">Users</a></li>
-          <li><a href="#section3">Products</a></li>
+          <li><a href="./views/category/create.php">Products</a></li>
           <li><a href="#section3">Blogs</a></li>
         </ul><br>
       </div>
