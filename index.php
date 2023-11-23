@@ -41,13 +41,13 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">Innovation</a>
-        
-      
+
+
 
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-         
+
           <li class="active"><a href="#">Dashboard</a></li>
           <li><a href="#">User</a></li>
           <li><a href="#">Products</a></li>
@@ -80,7 +80,19 @@
             <div class="well">
               <img style="width: 50px;" src="./public/profile.png" alt="">
               <h4>Users</h4>
-              <p>1 Million</p>
+              <?php
+              include './database/DbConnection.php';
+
+              $sql = "SELECT COUNT(*) as userCount FROM user";
+              $result = $connexion->query($sql);
+
+              if ($result && $result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                echo $row['userCount'];
+              } else {
+                echo "0";
+              }
+              ?>
             </div>
           </div>
           <div class="col-sm-4">
@@ -88,7 +100,23 @@
               <img style="width: 50px;" src="./public/products.png" alt="">
 
               <h4>Products</h4>
-              <p>100 Million</p>
+              <p>
+                <?php
+
+                include "./database/DbConnection.php";
+
+                $sql2 = "SELECT COUNT(*) as productCount FROM produit";
+                $result = $connexion->query($sql2);
+
+                if ($result && $result->num_rows > 0) {
+                  $row = $result->fetch_assoc();
+                  echo $row['productCount'];
+                } else {
+                  echo "0";
+                }
+
+                ?>
+              </p>
             </div>
           </div>
           <div class="col-sm-4">
@@ -96,7 +124,23 @@
               <img style="width: 50px;" src="./public/blog.png" alt="">
 
               <h4>Blogs</h4>
-              <p>10 Million</p>
+              <p>
+                <?php
+                include "./database/DbConnection.php";
+                $sql1 = "SELECT COUNT(*) as blogcount FROM blog";
+                $result = $connexion->query($sql1);
+
+                if ($result && $result->num_rows > 0) {
+                  $row = $result->fetch_assoc();
+                  echo $row['blogcount'];
+                } else {
+                  echo "0";
+                }
+
+
+                ?>
+
+              </p>
             </div>
           </div>
 
@@ -108,7 +152,21 @@
             <div class="well">
               <div class="col1  kpi">
                 <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
-                <div class="count green">26</div>
+                <div class="count green">
+                <?php
+              include './database/DbConnection.php';
+
+              $sql = "SELECT COUNT(*) as userCount FROM user";
+              $result = $connexion->query($sql);
+
+              if ($result && $result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                echo $row['userCount'];
+              } else {
+                echo "0";
+              }
+              ?>
+                </div>
                 <span class="count_bottom"><i class="green">4% </i> From last Week</span>
               </div>
             </div>
@@ -117,7 +175,23 @@
             <div class="well">
               <div class="col1  kpi">
                 <span class="count_top"><i class="fa fa-users"></i> Total Products</span>
-                <div class="count green">2500</div>
+                <div class="count green">
+                  <?php
+
+                  include "./database/DbConnection.php";
+
+                  $sql2 = "SELECT COUNT(*) as productCount FROM produit";
+                  $result = $connexion->query($sql2);
+
+                  if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    echo $row['productCount'];
+                  } else {
+                    echo "0";
+                  }
+
+                  ?>
+                </div>
                 <span class="count_bottom"><i class="green">50% </i> From last Week</span>
               </div>
             </div>
@@ -126,7 +200,22 @@
             <div class="well">
               <div class="col1  kpi">
                 <span class="count_top"><i class="fa fa-users"></i> Total blog</span>
-                <div class="count green">10</div>
+                <div class="count green">
+                <?php
+                include "./database/DbConnection.php";
+                $sql1 = "SELECT COUNT(*) as blogcount FROM blog";
+                $result = $connexion->query($sql1);
+
+                if ($result && $result->num_rows > 0) {
+                  $row = $result->fetch_assoc();
+                  echo $row['blogcount'];
+                } else {
+                  echo "0";
+                }
+
+
+                ?>
+                </div>
                 <span class="count_bottom"><i class="green">4% </i> From last Week</span>
               </div>
             </div>

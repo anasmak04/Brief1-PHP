@@ -42,15 +42,32 @@ if (isset($_POST['submit'])) {
 
         <h1 class="text-capitalize text-center">Product management system </h1>
         <p class="text-capitalize text-center">insert new product by category</p>
-        <form action="create.php" method="post">
+        <form action="create.php" method="post" >
+            <div class="row m-4">
             <input type="number" name="id_category" class="form-control" placeholder="Id category">
+            </div>
+            <div class="row m-4">
             <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
-            <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
-            <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
-            <input type="text" name="description_produit" class="form-control" placeholder="Description Product">
-            <input type="number" name="id_category_produit" class="form-control" placeholder="Id Category for Product">
 
-            <button type="submit" name="submit" class="btn btn-primary mt-4">Submit</button>
+            </div>
+            <div class="row m-4">
+            <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
+
+            </div>
+            <div class="row m-4">
+            <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
+
+            </div>
+            <div class="row m-4">
+            <input type="text" name="description_produit" class="form-control" placeholder="Description Product">
+            </div>
+                <div class="row m-4">
+                <input type="number" name="id_category_produit" class="form-control " placeholder="Id Category for Product">
+                </div>
+                <div class="row m-4">
+                <button type="submit" name="submit" class="btn btn-primary " style="margin: 0 auto; display :block">Submit</button>
+
+                </div>
         </form>
 
     </div>

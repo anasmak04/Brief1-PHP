@@ -34,9 +34,10 @@ $result = $connexion->query($sql);
             </thead>
             <tbody>
                 <?php
-
+                $counter = 0;
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+                        $counter++;
                 ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>

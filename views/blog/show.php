@@ -28,11 +28,13 @@ $result = $connexion->query($sql);
 
     <div class="container">
         <div class="row">
+
+                <h1 class="text-center">All Blogs</h1>
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
             ?>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 m-3">
                         <div class="card">
                             <div class="card-body border">
                                 <h5 class="card-title"><?php echo $row['nom']; ?></h5>
