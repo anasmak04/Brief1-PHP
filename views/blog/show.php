@@ -1,11 +1,3 @@
-<?php
-include '../../database/DbConnection.php';
-
-$sql = "SELECT * FROM blog";
-$result = $connexion->query($sql);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,15 +13,17 @@ $result = $connexion->query($sql);
     <?php
     include '../../database/DbConnection.php';
 
-    $sql = "SELECT * FROM blog";
-    $result = $connexion->query($sql);
+    $sql = "SELECT blog.*, user.firstName 
+        FROM blog 
+        INNER JOIN user ON blog.id_user = user.id";
 
+    $result = $connexion->query($sql);
     ?>
 
     <div class="container">
         <div class="row">
 
-                <h1 class="text-center">All Blogs</h1>
+            <h1 class="text-center">All Blogs</h1>
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -37,9 +31,10 @@ $result = $connexion->query($sql);
                     <div class="col-md-4 m-3">
                         <div class="card">
                             <div class="card-body border">
-                                <h5 class="card-title"><?php echo $row['nom']; ?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $row['author']; ?></h6>
-                                <p class="card-text"><?php echo $row['description']; ?></p>
+                                <h5 class="card-title">Blog Name : <?php echo $row['nom']; ?></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Id Author : <?php echo $row['id_user']; ?></h6>
+                                <p class="card-text">Description Blog : <?php echo $row['description']; ?></p>
+                                <p class="card-text">user BlogName : <?php echo $row['firstName']; ?></p>
                                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
                                 <a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure do you want to delete this user?')" class="btn btn-danger">Delete</a>
                             </div>

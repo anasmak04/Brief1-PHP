@@ -43,7 +43,7 @@ $result1 = $connexion->query($sql1);
         if ($result2) {
             if ($result2->num_rows > 0) {
                 echo '<h2>Products</h2>';
-                while ($row = $result2->fetch_assoc()) {   
+                while ($row = $result2->fetch_assoc()) {
     ?>
                     <div class="card" style="width: 30rem;">
                         <div class="card-body">

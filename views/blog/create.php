@@ -5,8 +5,8 @@ if (isset($_POST['submit'])) {
     $id = $_POST['id'];
     $nom_blog = $_POST['nom'];
     $description_blog = $_POST['description'];
-    $author_blog = $_POST['author'];
-    $sql = "INSERT INTO `blog`(`id`, `nom`, `description`, `author`) VALUES ('$id', '$nom_blog', '$description_blog', '$author_blog')";
+    $author_blog = $_POST['id_user'];
+    $sql = "INSERT INTO `blog`(`id`, `nom`, `description`, `id_user`) VALUES ('$id', '$nom_blog', '$description_blog', '$author_blog')";
 
     $result = $connexion->query($sql);
 
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
             <div class="row mt-4">
 
                 <div class="col">
-                    <input type="text" name="author" class="form-control" placeholder="nom author">
+                    <input type="number" name="id_user" class="form-control" placeholder="nom author">
                 </div>
             </div>
             <div class="row mt-4">
