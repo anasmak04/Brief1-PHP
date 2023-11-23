@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $id_produit = $_POST['id_produit'];
     $nom_produit = $_POST['nom_produit'];
     $description_produit = $_POST['description_produit'];
-    $id_category_produit = $_POST['id_category_produit']; 
+    $id_category_produit = $_POST['id_category_produit'];
 
     $sql1 = "INSERT INTO `category` (id, nom) VALUES ('$id_category', '$nom_category')";
     $result1 = $connexion->query($sql1);
@@ -43,15 +43,15 @@ if (isset($_POST['submit'])) {
         <h1 class="text-capitalize text-center">Product management system </h1>
         <p class="text-capitalize text-center">insert new product by category</p>
         <form action="create.php" method="post">
-    <input type="number" name="id_category" class="form-control" placeholder="Id category">
-    <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
-    <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
-    <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
-    <input type="text" name="description_produit" class="form-control" placeholder="Description Product">
-    <input type="number" name="id_category_produit" class="form-control" placeholder="Id Category for Product">
+            <input type="number" name="id_category" class="form-control" placeholder="Id category">
+            <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
+            <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
+            <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
+            <input type="text" name="description_produit" class="form-control" placeholder="Description Product">
+            <input type="number" name="id_category_produit" class="form-control" placeholder="Id Category for Product">
 
-    <button type="submit" name="submit" class="btn btn-primary mt-4">Submit</button>
-</form>
+            <button type="submit" name="submit" class="btn btn-primary mt-4">Submit</button>
+        </form>
 
     </div>
     </div>

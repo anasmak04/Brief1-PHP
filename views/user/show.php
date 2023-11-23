@@ -20,7 +20,7 @@ $result = $connexion->query($sql);
 <body>
     <div class="container">
         <div class="m-4">
-        <a href="create.php" class="btn btn-primary">new user</a>
+            <a href="create.php" class="btn btn-primary">new user</a>
         </div>
         <table class="table">
             <thead>
@@ -34,7 +34,7 @@ $result = $connexion->query($sql);
             </thead>
             <tbody>
                 <?php
-                 
+
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                 ?>

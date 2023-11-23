@@ -62,10 +62,10 @@
       <div class="col-sm-3 sidenav hidden-xs">
         <h2>Innovation</h2>
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#section1">Dashboard</a></li>
+          <li class="active"><a href="#">Dashboard</a></li>
           <li><a href="./views/user/show.php">Users</a></li>
           <li><a href="./views/produit/create.php">Products</a></li>
-          <li><a href="#section3">Blogs</a></li>
+          <li><a href="./views/blog/create.php">Blogs</a></li>
         </ul><br>
       </div>
       <br>
