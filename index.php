@@ -153,19 +153,19 @@
               <div class="col1  kpi">
                 <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
                 <div class="count green">
-                <?php
-              include './database/DbConnection.php';
+                  <?php
+                  include './database/DbConnection.php';
 
-              $sql = "SELECT COUNT(*) as userCount FROM user";
-              $result = $connexion->query($sql);
+                  $sql = "SELECT COUNT(*) as userCount FROM user";
+                  $result = $connexion->query($sql);
 
-              if ($result && $result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                echo $row['userCount'];
-              } else {
-                echo "0";
-              }
-              ?>
+                  if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    echo $row['userCount'];
+                  } else {
+                    echo "0";
+                  }
+                  ?>
                 </div>
                 <span class="count_bottom"><i class="green">4% </i> From last Week</span>
               </div>
@@ -201,20 +201,20 @@
               <div class="col1  kpi">
                 <span class="count_top"><i class="fa fa-users"></i> Total blog</span>
                 <div class="count green">
-                <?php
-                include "./database/DbConnection.php";
-                $sql1 = "SELECT COUNT(*) as blogcount FROM blog";
-                $result = $connexion->query($sql1);
+                  <?php
+                  include "./database/DbConnection.php";
+                  $sql1 = "SELECT COUNT(*) as blogcount FROM blog";
+                  $result = $connexion->query($sql1);
 
-                if ($result && $result->num_rows > 0) {
-                  $row = $result->fetch_assoc();
-                  echo $row['blogcount'];
-                } else {
-                  echo "0";
-                }
+                  if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    echo $row['blogcount'];
+                  } else {
+                    echo "0";
+                  }
 
 
-                ?>
+                  ?>
                 </div>
                 <span class="count_bottom"><i class="green">4% </i> From last Week</span>
               </div>
