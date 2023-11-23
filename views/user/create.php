@@ -3,11 +3,12 @@
 include '../../database/DbConnection.php';
 
 if (isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $id = mysqli_real_escape_string($connexion, $_POST['id']);
+    $firstName = mysqli_real_escape_string($connexion, $_POST['firstName']);
+    $lastName = mysqli_real_escape_string($connexion, $_POST['lastName']);
+    $email = mysqli_real_escape_string($connexion, $_POST['email']);
+    $password = mysqli_real_escape_string($connexion, $_POST['password']);
+    
 
     $sql = "INSERT INTO `user` (`id`, `firstName`, `lastName`, `email`, `password`)
             VALUES ('$id', '$firstName', '$lastName', '$email', '$password')";

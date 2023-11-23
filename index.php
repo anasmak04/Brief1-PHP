@@ -71,14 +71,14 @@
       <br>
 
       <div class="col-sm-9">
-        <div class="well">
-          <h4>Dashboard</h4>
-          <p>Dashbord Innovation System to manage your works easily</p>
+        <div class="row">
+          <h2 class="" style="margin: 20px;">Dashbord system</h2>
         </div>
+
         <div class="row text-center">
           <div class="col-sm-4  ">
             <div class="well">
-              <img style="width: 50px;" src="./public/profile.png" alt="">
+              <img style="width: 50px;" src="./public/assets/profile.png" alt="">
               <h4>Users</h4>
               <?php
               include './database/DbConnection.php';
@@ -97,7 +97,7 @@
           </div>
           <div class="col-sm-4">
             <div class="well">
-              <img style="width: 50px;" src="./public/products.png" alt="">
+              <img style="width: 50px;" src="./public/assets/products.png" alt="">
 
               <h4>Products</h4>
               <p>
@@ -121,7 +121,7 @@
           </div>
           <div class="col-sm-4">
             <div class="well">
-              <img style="width: 50px;" src="./public/blog.png" alt="">
+              <img style="width: 50px;" src="./public/assets/blog.png" alt="">
 
               <h4>Blogs</h4>
               <p>
@@ -258,7 +258,7 @@
                       </div>
                     </div>
                   </div>
-                
+
                 </div>
 
               </div>
@@ -271,7 +271,7 @@
               </div>
               <div class="col5">
 
-              <div class="titles">
+                <div class="titles">
 
 
                 </div>
@@ -303,7 +303,7 @@
                       </div>
                     </div>
                   </div>
-                
+
                 </div>
 
               </div>
