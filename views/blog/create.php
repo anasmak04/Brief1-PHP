@@ -35,10 +35,10 @@ if (isset($_POST['submit'])) {
 
     <div class="container mt-4">
 
-        <a href="show.php" class="btn btn-primary">view all users</a>
+        <a href="show.php" class="btn btn-primary">view all blogs</a>
 
-        <h1 class="text-capitalize text-center">user management system </h1>
-        <p class="text-capitalize text-center">insert a values from user</p>
+        <h1 class="text-capitalize text-center">Blog management system </h1>
+        <p class="text-capitalize text-center">insert a values from Blog</p>
         <form action="create.php" method="post">
             <div class="row">
                 <div class="col">
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
             <div class="row m-4">
-                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" placeholder="Description" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="row mt-4">
 

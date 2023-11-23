@@ -73,7 +73,7 @@
       <div class="col-sm-9">
         <div class="well">
           <h4>Dashboard</h4>
-          <p>Some text..</p>
+          <p>Dashbord Innovation System to manage your works easily</p>
         </div>
         <div class="row text-center">
           <div class="col-sm-4  ">
@@ -233,7 +233,7 @@
 
                 <div class="col2">
                   <div>
-                    <p>Home Page Views</p>
+                    <p>User Page Views</p>
                     <div class="">
                       <div class="progress progress_sm" style="width: 100%;">
                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 9%;"></div>
@@ -241,7 +241,7 @@
                     </div>
                   </div>
                   <div>
-                    <p>Contact Page Views</p>
+                    <p>Blog Page Views</p>
                     <div class="">
                       <div class="progress progress_sm" style="width: 100%;">
                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 70%;"></div>
@@ -251,21 +251,14 @@
                 </div>
                 <div class="col2">
                   <div>
-                    <p>Chart js Page</p>
+                    <p>Product Page</p>
                     <div class="">
                       <div class="progress progress_sm" style="width: 100%;">
                         <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 56%;"></div>
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <p>Subscription Page</p>
-                    <div class="">
-                      <div class="progress progress_sm" style="width: 100%;">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 25%;"></div>
-                      </div>
-                    </div>
-                  </div>
+                
                 </div>
 
               </div>
@@ -275,6 +268,44 @@
             <div class="well">
               <div class="col3">
                 <h3>Top Visits</h3>
+              </div>
+              <div class="col5">
+
+              <div class="titles">
+
+
+                </div>
+
+                <div class="col2">
+                  <div>
+                    <p>Blog Page Views</p>
+                    <div class="">
+                      <div class="progress progress_sm" style="width: 100%;">
+                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 9%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Product Page Views</p>
+                    <div class="">
+                      <div class="progress progress_sm" style="width: 100%;">
+                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col2">
+                  <div>
+                    <p>User Page</p>
+                    <div class="">
+                      <div class="progress progress_sm" style="width: 100%;">
+                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80" aria-valuenow="79" style="width: 56%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+
               </div>
 
 

@@ -80,3 +80,12 @@ var chart_02 = new Chart(ctx1, {
 
 
 
+const Details = document.getElementById('Details');
+const popup = document.getElementById('popup');
+
+
+Details.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.style.display = "block";
+    popup.style.color="red";
+})
