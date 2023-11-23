@@ -5,8 +5,8 @@ if (isset($_POST['submit'])) {
     $id = $_POST['id'];
     $nom = $_POST['nom'];
     $description = $_POST['description'];
-    $author = $_POST['author'];
-    $sql = "UPDATE `blog` SET `nom`='$nom', `description`='$description', `author` = '$author' WHERE `id`='$id'";
+    $author = $_POST['id_user'];
+    $sql = "UPDATE `blog` SET `nom`='$nom', `description`='$description', `id_user` = '$author' WHERE `id`='$id'";
 
     $result = $connexion->query($sql);
 
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
                         $id = $row['id'];
                         $nom = $row['nom'];
                         $description = $row['description'];
-                        $author = $row['author'];
+                        $author = $row['id_user'];
                     }
                 }
             }
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
                     <input type="text" class="form-control" name="description" value="<?php echo $description; ?>" placeholder="description">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" name="author" value="<?php echo  $author; ?>" placeholder="author">
+                    <input type="number" class="form-control" name="id_user" value="<?php echo  $author; ?>" placeholder="author">
                 </div>
             </div>
             <button type="submit" name="submit" class="btn btn-primary mt-4 ">Update blog</button>
