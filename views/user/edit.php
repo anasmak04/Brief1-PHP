@@ -2,10 +2,10 @@
 include '../../database/DbConnection.php';
 
 if (isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
+    $id = mysqli_real_escape_string($connexion , $_POST['id']);
+    $firstName = mysqli_real_escape_string($connexion , $_POST['firstName']);
+    $lastName = mysqli_real_escape_string($connexion , $_POST['lastName']);
+    $email = mysqli_real_escape_string($connexion , $_POST['email']);
 
     $sql = "UPDATE `user` SET `firstName`='$firstName', `lastName`='$lastName', `email`='$email' WHERE `id`='$id'";
 
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         <form action="edit.php" method="post">
             <?php
             if (isset($_GET['id'])) {
-                $user_id = $_GET['id'];
+                $user_id = mysqli_real_escape_string($connexion , $_GET['id']);
                 $sql = "SELECT * FROM `user` WHERE `id`='$user_id'";
                 $result = $connexion->query($sql);
                 if ($result->num_rows > 0) {

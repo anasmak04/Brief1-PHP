@@ -3,9 +3,9 @@ include '../../database/DbConnection.php';
 
 if (isset($_POST['submit'])) {
 
-    $id_produit = $_POST['id_produit'];
-    $nom_produit = $_POST['nom_produit'];
-    $description_produit = $_POST['description_produit'];
+    $id_produit = mysqli_real_escape_string($connexion , $_POST['id_produit']);
+    $nom_produit = mysqli_real_escape_string($connexion , $_POST['nom_produit']);
+    $description_produit = mysqli_real_escape_string($connexion , $_POST['description_produit']);
 
     $sql = "UPDATE `produit` SET `nom`='$nom_produit', `description`='$description_produit' WHERE `id`='$id_produit'";
 
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         <form action="edit.php" method="post">
             <?php
             if (isset($_GET['id'])) {
-                $produit_id = $_GET['id'];
+                $produit_id = mysqli_real_escape_string($connexion , $_GET['id']);
                 $sql = "SELECT * FROM `produit` WHERE `id`='$produit_id'";
                 $result = $connexion->query($sql);
                 if ($result->num_rows > 0) {

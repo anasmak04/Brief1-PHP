@@ -2,10 +2,11 @@
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
-    $id = $_POST['id'];
-    $nom_blog = $_POST['nom'];
-    $description_blog = $_POST['description'];
-    $author_blog = $_POST['id_user'];
+    
+    $id = mysqli_real_escape_string($connexion,$_POST['id']);
+    $nom_blog = mysqli_real_escape_string($connexion ,$_POST['nom']);
+    $description_blog = mysqli_real_escape_string($connexion , $_POST['description']);
+    $author_blog = mysqli_real_escape_string($connexion , $_POST['id_user']);
     $sql = "INSERT INTO `blog`(`id`, `nom`, `description`, `id_user`) VALUES ('$id', '$nom_blog', '$description_blog', '$author_blog')";
 
     $result = $connexion->query($sql);

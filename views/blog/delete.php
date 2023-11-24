@@ -2,7 +2,7 @@
 include '../../database/DbConnection.php';
 
 if (isset($_GET['id'])) {
-    $blog_id = $_GET['id'];
+    $blog_id = mysqli_real_escape_string($connexion ,$_GET['id']);
     $sql = "DELETE FROM `blog` WHERE id='$blog_id'";
     $result = $connexion->query($sql);
 

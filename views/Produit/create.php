@@ -2,12 +2,12 @@
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
-    $id_category = $_POST['id_category'];
-    $nom_category = $_POST['nom_category'];
-    $id_produit = $_POST['id_produit'];
-    $nom_produit = $_POST['nom_produit'];
-    $description_produit = $_POST['description_produit'];
-    $id_category_produit = $_POST['id_category_produit'];
+    $id_category = mysqli_real_escape_string($connexion , $_POST['id_category']);
+    $nom_category = mysqli_real_escape_string($connexion , $_POST['nom_category']);
+    $id_produit = mysqli_real_escape_string($connexion , $_POST['id_produit']);
+    $nom_produit = mysqli_real_escape_string($connexion , $_POST['nom_produit']);
+    $description_produit = mysqli_real_escape_string($connexion , $_POST['description_produit']);
+    $id_category_produit = mysqli_real_escape_string($connexion , $_POST['id_category_produit']);
 
     $sql1 = "INSERT INTO `category` (id, nom) VALUES ('$id_category', '$nom_category')";
     $result1 = $connexion->query($sql1);
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container mt-4">
 
-        <a href="show.php" class="btn btn-primary">Insert New Product</a>
+        <a href="show.php" class="btn btn-primary">View All Products</a>
 
         <h1 class="text-capitalize text-center">Product management system </h1>
         <p class="text-capitalize text-center">insert new product by category</p>

@@ -2,7 +2,7 @@
 include '../../database/DbConnection.php';
 
 if (isset($_GET['id'])) {
-    $product_id = $_GET['id']; 
+    $product_id =mysqli_real_escape_string($connexion ,  $_GET['id']); 
     $sql = "DELETE FROM `produit` WHERE id='$product_id'";
     $result = $connexion->query($sql);
 
