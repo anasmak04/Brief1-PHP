@@ -110,7 +110,7 @@ $result = $connexion->query($sql);
                                                     <lord-icon src="https://cdn.lordicon.com/lsrcesku.json" trigger="hover">
                                                     </lord-icon></a>
                                                 <a style="width: flit-content;" href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure do you want to delete this user?')">
-                                                    <lord-icon src="https://cdn.lordicon.com/xekbkxul.json" trigger="hover" colors="primary:#121331,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef" >
+                                                    <lord-icon src="https://cdn.lordicon.com/xekbkxul.json" trigger="hover" colors="primary:#121331,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef">
                                                     </lord-icon>
                                                 </a>
                                             </td>

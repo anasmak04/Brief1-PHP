@@ -5,20 +5,86 @@ $sql1 = "SELECT * FROM `category`";
 $result1 = $connexion->query($sql1);
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Show all products</title>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./public/js/script.js" defer></script>
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <style>
+        .row.content {
+            height: 550px
+        }
+
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            .row.content {
+                height: auto;
+            }
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h3 class="text-center pt-4">View all products by categories</h3>
-    <form method="post">
-        <select name="category" id="category" class="form-select mt-4" style="width: 500px; margin: 0 auto; display: block;" aria-label="Default select example">
+
+    <nav class="navbar navbar-inverse visible-xs">
+        <div class="container-fluid">
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav hidden-xs">
+                <h2>Innovation</h2>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li class="d-flex align-items-center">
+                        <a style="display: flex; align-items:center;" href="../user/show.php" class="d-flex align-items-center">
+                            <lord-icon src="https://cdn.lordicon.com/mebvgwrs.json" trigger="hover" class="lord-icon"></lord-icon>
+                            Users
+                        </a>
+                    </li>
+                    <li><a style="display: flex; align-items:center;" href="../Produit/show.php">
+                            <lord-icon src="https://cdn.lordicon.com/eiekfffz.json" trigger="hover">
+                            </lord-icon>
+                            Products</a></li>
+                    <li><a style="display: flex; align-items:center;" href="../blog/show.php"><lord-icon src="https://cdn.lordicon.com/tkaupsqk.json" trigger="hover">
+                            </lord-icon>
+
+                            Blogs</a></li>
+                </ul><br>
+            </div>
+
+            <div class="col-xs-12 col-sm-9" style="margin-top: 20px;">
+                <div class="container-fluid ">
+                    <div class="m-4">
+                        <a href="create.php" style="display: flex; align-items:center; width:fit-content; float:right;" class="btn btn-primary">
+                            <lord-icon src="https://cdn.lordicon.com/pdsourfn.json" trigger="hover">
+                            </lord-icon>
+                        </a>
+                    </div>
+                    <form method="post">
+        <select name="category" class="form-select" aria-label="Default select example" style="width: 500px; padding:20px; height:30px; margin: 0 auto; display: block;" aria-label="Default select example">
             <?php
             if ($result1->num_rows > 0) {
                 while ($row = $result1->fetch_assoc()) {
@@ -31,7 +97,7 @@ $result1 = $connexion->query($sql1);
             }
             ?>
         </select>
-        <button type="submit" name="submit" class="btn btn-primary mt-4" style="width: 500px; margin: 0 auto; display: block;">Show Products</button>
+        <button type="submit" name="submit" class="btn btn-primary mt-4" style="width: 500px; margin: 0 auto; display: block; position:relative; top:10px;">Show Products</button>
     </form>
 
     <?php
@@ -66,6 +132,11 @@ $result1 = $connexion->query($sql1);
         }
     }
     ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </body>
 
