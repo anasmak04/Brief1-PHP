@@ -56,8 +56,8 @@ $result = $connexion->query($sql);
             <div class="col-sm-3 sidenav hidden-xs">
                 <h2>Innovation</h2>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li class="d-flex align-items-center">
+                    <li class="active"><a href="../../index.php">Dashboard</a></li>
+                    <li class=" d-flex align-items-center">
                         <a style="display: flex; align-items:center;" href="../user/show.php" class="d-flex align-items-center">
                             <lord-icon src="https://cdn.lordicon.com/mebvgwrs.json" trigger="hover" class="lord-icon"></lord-icon>
                             Users
@@ -109,6 +109,12 @@ $result = $connexion->query($sql);
                                                 <a style="width: fill-content;" href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">
                                                     <lord-icon src="https://cdn.lordicon.com/lsrcesku.json" trigger="hover">
                                                     </lord-icon></a>
+
+                                                    <!-- <form action="edit.php" method="post">
+                                                        <input type="hidden" name="id" value="<?=  $row['id']; ?>">
+                                                        <input name="submit" type="submit" value="submit">
+                                                    </form> -->
+
                                                 <a style="width: flit-content;" href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure do you want to delete this user?')">
                                                     <lord-icon src="https://cdn.lordicon.com/xekbkxul.json" trigger="hover" colors="primary:#121331,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef">
                                                     </lord-icon>

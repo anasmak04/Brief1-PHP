@@ -46,13 +46,23 @@
 
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-
+        <ul class="nav nav-pills nav-stacked">
           <li class="active"><a href="#">Dashboard</a></li>
-          <li><a href="#">User</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
+          <li class="d-flex align-items-center">
+            <a style="display: flex; align-items:center;" href="../user/show.php" class="d-flex align-items-center">
+              <lord-icon src="https://cdn.lordicon.com/mebvgwrs.json" trigger="hover" class="lord-icon"></lord-icon>
+              Users
+            </a>
+          </li>
+          <li><a style="display: flex; align-items:center;" href="../Produit/show.php">
+              <lord-icon src="https://cdn.lordicon.com/eiekfffz.json" trigger="hover">
+              </lord-icon>
+              Products</a></li>
+          <li><a style="display: flex; align-items:center;" href="../blog/show.php"><lord-icon src="https://cdn.lordicon.com/tkaupsqk.json" trigger="hover">
+              </lord-icon>
+
+              Blogs</a></li>
+        </ul><br>
       </div>
     </div>
   </nav>
@@ -62,10 +72,21 @@
       <div class="col-sm-3 sidenav hidden-xs">
         <h2>Innovation</h2>
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Dashboard</a></li>
-          <li><a href="./views/user/show.php">Users</a></li>
-          <li><a href="./views/produit/create.php">Products</a></li>
-          <li><a href="./views/blog/create.php">Blogs</a></li>
+          <li class="active"><a href="/index.php">Dashboard</a></li>
+          <li class="d-flex align-items-center">
+            <a style="display: flex; align-items:center;" href="./views/user/show.php" class="d-flex align-items-center">
+              <lord-icon src="https://cdn.lordicon.com/mebvgwrs.json" trigger="hover" class="lord-icon"></lord-icon>
+              Users
+            </a>
+          </li>
+          <li><a style="display: flex; align-items:center;" href="./views/Produit/show.php">
+              <lord-icon src="https://cdn.lordicon.com/eiekfffz.json" trigger="hover">
+              </lord-icon>
+              Products</a></li>
+          <li><a style="display: flex; align-items:center;" href="./views/blog/show.php"><lord-icon src="https://cdn.lordicon.com/tkaupsqk.json" trigger="hover">
+              </lord-icon>
+
+              Blogs</a></li>
         </ul><br>
       </div>
       <br>
@@ -322,6 +343,7 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </body>
 

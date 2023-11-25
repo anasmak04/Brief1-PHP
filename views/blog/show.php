@@ -37,6 +37,7 @@
                 width: 250px;
                 border-right: 1px solid #ccc;
             }
+
             .col-xs-12.col-sm-9 {
                 margin-left: 250px;
             }
@@ -52,7 +53,7 @@
             <div class="col-sm-3 sidenav hidden-xs">
                 <h2>Innovation</h2>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li class="active"><a href="../../index.php">Dashboard</a></li>
                     <li class="d-flex align-items-center">
                         <a style="display: flex; align-items:center;" href="../user/show.php" class="d-flex align-items-center">
                             <lord-icon src="https://cdn.lordicon.com/mebvgwrs.json" trigger="hover" class="lord-icon"></lord-icon>
@@ -100,13 +101,19 @@
                                                 <h6 class="card-subtitle mb-2 text-muted">Id Author : <?php echo $row['id_user']; ?></h6>
                                                 <p class="card-text">Description Blog : <?php echo $row['description']; ?></p>
                                                 <p class="card-text">Blog Name : <?php echo $row['firstName']; ?></p>
-                                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
-                                                <a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure do you want to delete this user?')" class="btn btn-danger">Delete</a>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                                    View More
-                                                </button>
 
-                                              
+                                                <div style="display: flex; gap:12px;" class="d-flex">
+                                                    <a style="width: fit-content; display:flex; align-items:center;" href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">
+                                                        <lord-icon src="https://cdn.lordicon.com/lsrcesku.json" trigger="hover">
+                                                        </lord-icon>
+                                                        Edit</a>
+                                                    <a style="width: fit-content; display:flex; align-items:center;" href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure do you want to delete this user?')" class="btn btn-danger">
+                                                        <lord-icon src="https://cdn.lordicon.com/xekbkxul.json" trigger="hover" colors="primary:#121331,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef">
+                                                        </lord-icon>
+                                                        Delete</a>
+                                                </div>
+
+
                                             </div>
                                         </div>
                                     </div>

@@ -11,6 +11,10 @@
         die('error connection here '. $connexion->connect_error);
     }
 
+    else{
+        echo "connection work";
+    }
+
     
 
 
