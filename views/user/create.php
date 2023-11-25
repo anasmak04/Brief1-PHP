@@ -3,7 +3,6 @@
 include '../../database/DbConnection.php';
 
 if (isset($_POST['submit'])) {
-    $id = mysqli_real_escape_string($connexion, $_POST['id']);
     $firstName = mysqli_real_escape_string($connexion, $_POST['firstName']);
     $lastName = mysqli_real_escape_string($connexion, $_POST['lastName']);
     $email = mysqli_real_escape_string($connexion, $_POST['email']);
@@ -49,9 +48,7 @@ if (isset($_POST['submit'])) {
         <p class="text-capitalize text-center">insert a values from user</p>
         <form action="create.php" method="post">
             <div class="row">
-                <div class="col">
-                    <input type="number" name="id" class="form-control" placeholder="Id user">
-                </div>
+            
                 <div class="col">
                     <input type="text" name="firstName" class="form-control" placeholder="First name">
                 </div>

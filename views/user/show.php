@@ -86,7 +86,6 @@ $result = $connexion->query($sql);
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">id</th>
                                     <th scope="col">FirstName</th>
                                     <th scope="col">LastName</th>
                                     <th scope="col">Email</th>
@@ -101,7 +100,6 @@ $result = $connexion->query($sql);
                                         $counter++;
                                 ?>
                                         <tr>
-                                            <td><?php echo $row['id']; ?></td>
                                             <td><?php echo $row['firstName']; ?></td>
                                             <td><?php echo $row['lastName']; ?></td>
                                             <td><?php echo $row['email']; ?></td>
