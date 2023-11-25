@@ -40,7 +40,7 @@
                                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
                                 <a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure do you want to delete this user?')" class="btn btn-danger">Delete</a>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                    View More 
+                                    View More
                                 </button>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
