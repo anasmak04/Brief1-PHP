@@ -1,5 +1,4 @@
 <?php
-
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
@@ -8,19 +7,25 @@ if (isset($_POST['submit'])) {
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $confirmPwd = $_POST['confirmPassword'];
 
-    $sql = "INSERT INTO `user` (`id`, `firstName`, `lastName`, `email`, `password`)
-            VALUES ('$id', '$firstName', '$lastName', '$email', '$password')";
-
-    $result = $connexion->query($sql);
-    $path = "../login/signin.php";
-
-    if ($result) {
-        echo "Registration done successfully!";
-        header("location:" . $path);
+    if ($password !== $confirmPwd) {
+        echo "Password does not match. Please try again.";
     } else {
-        echo "Something went wrong while registration!<br>";
-        echo "Error Description: " . $connexion->error;
+        $sql = "INSERT INTO `user` (`id`, `firstName`, `lastName`, `email`, `password`)
+                VALUES ('$id', '$firstName', '$lastName', '$email', '$password')";
+
+        $result = $connexion->query($sql);
+        $path = "../login/signin.php";
+
+        if ($result) {
+            echo "Registration done successfully!";
+            header("Location: " . $path);
+            exit(); // Ensure to halt script execution after redirection
+        } else {
+            echo "Something went wrong while registration!<br>";
+            echo "Error Description: " . $connexion->error;
+        }
     }
 }
 ?>
@@ -45,6 +50,7 @@ if (isset($_POST['submit'])) {
         Last Name: <input type="text" name="lastName"><br>
         Email: <input type="text" name="email" required><br>
         Password: <input type="password" name="password" required><br>
+        Password: <input type="password" name="confirmPassword" required><br>
 
         <button type="submit" name="submit">Register</button>
         <hr>
