@@ -2,12 +2,12 @@
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
-    
-    $id = mysqli_real_escape_string($connexion,$_POST['id']);
-    $nom_blog = mysqli_real_escape_string($connexion ,$_POST['nom']);
-    $description_blog = mysqli_real_escape_string($connexion , $_POST['description']);
-    $author_blog = mysqli_real_escape_string($connexion , $_POST['id_user']);
-    $sql = "INSERT INTO `blog`(`id`, `nom`, `description`, `id_user`) VALUES ('$id', '$nom_blog', '$description_blog', '$author_blog')";
+
+    $id = mysqli_real_escape_string($connexion, $_POST['id']);
+    $nom_blog = mysqli_real_escape_string($connexion, $_POST['nom']);
+    $description_blog = mysqli_real_escape_string($connexion, $_POST['description']);
+    $author_blog = mysqli_real_escape_string($connexion, $_POST['id_user']);
+    $sql = "INSERT INTO `blog`(`nom`, `description`, `id_user`) VALUES ('$nom_blog', '$description_blog', '$author_blog')";
 
     $result = $connexion->query($sql);
 
@@ -42,9 +42,7 @@ if (isset($_POST['submit'])) {
         <p class="text-capitalize text-center">insert a values from Blog</p>
         <form action="create.php" method="post">
             <div class="row">
-                <div class="col">
-                    <input type="number" name="id" class="form-control" placeholder="Id blog">
-                </div>
+
                 <div class="col">
                     <input type="text" name="nom" class="form-control" placeholder="Nom blog">
                 </div>

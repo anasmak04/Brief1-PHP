@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Dashbord system</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -41,9 +41,6 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">Innovation</a>
-
-
-
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav nav-pills nav-stacked">

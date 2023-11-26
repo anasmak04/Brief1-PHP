@@ -4,7 +4,6 @@ include "../../database/DbConnection.php";
 if (isset($_POST['submit'])) {
     $id_category = mysqli_real_escape_string($connexion , $_POST['id_category']);
     $nom_category = mysqli_real_escape_string($connexion , $_POST['nom_category']);
-    $id_produit = mysqli_real_escape_string($connexion , $_POST['id_produit']);
     $nom_produit = mysqli_real_escape_string($connexion , $_POST['nom_produit']);
     $description_produit = mysqli_real_escape_string($connexion , $_POST['description_produit']);
     $id_category_produit = mysqli_real_escape_string($connexion , $_POST['id_category_produit']);
@@ -12,7 +11,7 @@ if (isset($_POST['submit'])) {
     $sql1 = "INSERT INTO `category` (id, nom) VALUES ('$id_category', '$nom_category')";
     $result1 = $connexion->query($sql1);
 
-    $sql2 = "INSERT INTO `produit` (id, nom, description, id_category) VALUES ('$id_produit', '$nom_produit', '$description_produit', '$id_category_produit')";
+    $sql2 = "INSERT INTO `produit` (nom, description, id_category) VALUES ('$nom_produit', '$description_produit', '$id_category_produit')";
     $result2 = $connexion->query($sql2);
 
     if ($result1 && $result2) {
@@ -50,10 +49,7 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="nom_category" class="form-control" placeholder="Nom Category">
 
             </div>
-            <div class="row m-4">
-                <input type="number" name="id_produit" class="form-control" placeholder="Id Product">
-
-            </div>
+       
             <div class="row m-4">
                 <input type="text" name="nom_produit" class="form-control" placeholder="Nom Product">
 

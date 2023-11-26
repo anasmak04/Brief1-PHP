@@ -108,8 +108,8 @@ $result = $connexion->query($sql);
                                                     <lord-icon src="https://cdn.lordicon.com/lsrcesku.json" trigger="hover">
                                                     </lord-icon></a>
 
-                                                    <!-- <form action="edit.php" method="post">
-                                                        <input type="hidden" name="id" value="<?=  $row['id']; ?>">
+                                                <!-- <form action="edit.php" method="post">
+                                                        <input type="hidden" name="id" value="<?= $row['id']; ?>">
                                                         <input name="submit" type="submit" value="submit">
                                                     </form> -->
 

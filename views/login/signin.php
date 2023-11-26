@@ -7,12 +7,12 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-$sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
+    $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
 
     $result = $connexion->query($sql);
     $path = "../../index.php";
     if ($result) {
-        header("location:".$path);
+        header("location:" . $path);
     } else {
         echo "Something went wrong while registration!<br>";
         echo "Error Description: " . $connexion->error;
@@ -38,18 +38,19 @@ $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
         box-sizing: border-box;
     }
 
-    .container {
-        padding: 16px;
-        background-color: white;
+
+
+    form {
+        margin-top: 50px;
     }
 
     input[type=text],
     input[type=password],
-    input[type=number]  {
-        width: 100%;
+    input[type=number] {
+        width: 50%;
         padding: 15px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
+        margin: 0 auto;
+        display: block;
         border: none;
         background: #f1f1f1;
     }
@@ -60,7 +61,6 @@ $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
         outline: none;
     }
 
-    /* Overwrite default styles of hr */
     hr {
         border: 1px solid #f1f1f1;
         margin-bottom: 25px;
@@ -70,11 +70,11 @@ $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
         background-color: #04AA6D;
         color: white;
         padding: 16px 20px;
-        margin: 8px 0;
-        width: fit-content;
+        margin: 0 auto;
+        display: block;
         border: none;
         cursor: pointer;
-        width: 100%;
+        width: 50%;
         opacity: 0.9;
     }
 
@@ -90,6 +90,11 @@ $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
         background-color: #f1f1f1;
         text-align: center;
     }
+
+    h2,
+    p {
+        text-align: center;
+    }
 </style>
 
 
@@ -97,13 +102,13 @@ $sql = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
     <h2>User Registration Form</h2>
 
     <form action="signin.php" method="post">
-        Email: <input type="text" name="email" required><br>
-        Password: <input type="password" name="password" required><br>
+        <input type="text" name="email" required placeholder="enter your email"><br>
+        <input type="password" name="password" required placeholder="enter your password"><br>
 
         <button class="registerbtn" type="submit" name="submit">Register</button>
         <hr>
 
-        <p>Already registered? <a href="login.php">Login</a></p>
+        <p>You Don't have an account? <a href="login.php">Register</a></p>
     </form>
 </body>
 

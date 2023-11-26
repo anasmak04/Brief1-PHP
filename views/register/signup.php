@@ -2,7 +2,6 @@
 include "../../database/DbConnection.php";
 
 if (isset($_POST['submit'])) {
-    $id = $_POST['id'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
@@ -13,8 +12,8 @@ if (isset($_POST['submit'])) {
     if ($password !== $confirmPwd) {
         echo "Password does not match. Please try again.";
     } else {
-        $sql = "INSERT INTO `user` (`id`, `firstName`, `lastName`, `email`, `password`)
-                VALUES ('$id', '$firstName', '$lastName', '$email', '$password')";
+        $sql = "INSERT INTO `user` (`firstName`, `lastName`, `email`, `password`)
+                VALUES ('$firstName', '$lastName', '$email', '$password')";
 
         $result = $connexion->query($sql);
         $path = "../login/signin.php";
@@ -48,18 +47,19 @@ if (isset($_POST['submit'])) {
         box-sizing: border-box;
     }
 
-    .container {
-        padding: 16px;
-        background-color: white;
-    }
+    
+
+   form{
+    margin-top: 50px;
+   }
 
     input[type=text],
     input[type=password],
-    input[type=number]  {
-        width: 100%;
+    input[type=number] {
+        width: 50%;
         padding: 15px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
+        margin: 0 auto;
+        display: block;
         border: none;
         background: #f1f1f1;
     }
@@ -70,7 +70,6 @@ if (isset($_POST['submit'])) {
         outline: none;
     }
 
-    /* Overwrite default styles of hr */
     hr {
         border: 1px solid #f1f1f1;
         margin-bottom: 25px;
@@ -80,11 +79,11 @@ if (isset($_POST['submit'])) {
         background-color: #04AA6D;
         color: white;
         padding: 16px 20px;
-        margin: 8px 0;
-        width: fit-content;
+        margin: 0 auto;
+        display: block;
         border: none;
         cursor: pointer;
-        width: 100%;
+        width: 50%;
         opacity: 0.9;
     }
 
@@ -100,6 +99,10 @@ if (isset($_POST['submit'])) {
         background-color: #f1f1f1;
         text-align: center;
     }
+
+    h2,p{
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -108,12 +111,11 @@ if (isset($_POST['submit'])) {
 
 
     <form action="signup.php" method="post">
-        Id: <input type="number" name="id"><br>
-        First Name: <input type="text" name="firstName"><br>
-        Last Name: <input type="text" name="lastName"><br>
-        Email: <input type="text" name="email" required><br>
-        Password: <input type="password" name="password" required><br>
-        Confirm Password: <input type="password" name="confirmPassword" required><br>
+   <input type="text" name="firstName" placeholder="Enter your firstName"><br>
+        <input type="text" name="lastName" placeholder="Enter your lastName"><br>
+        <input type="text" name="email" required placeholder="Enter your Email"><br>
+        <input type="password" name="password" required placeholder="Enter your password"><br>
+         <input type="password" name="confirmPassword" required placeholder="confrm your password"><br>
 
         <button class="registerbtn" type="submit" name="submit">Register</button>
         <hr>
