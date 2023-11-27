@@ -84,7 +84,7 @@ $result1 = $connexion->query($sql1);
                         </a>
                     </div>
                     <form method="post">
-                        <select name="category" class="form-select" aria-label="Default select example" style="width: 500px; padding:20px; height:auto; margin: 0 auto; display: block;" aria-label="Default select example">
+                        <select name="category" class="form-select" aria-label="Default select example" style="width: 500px; padding:20px; height:70px; position:relative; left:30px; margin: 0 auto; display: block;" aria-label="Default select example">
                             <?php
                             if ($result1->num_rows > 0) {
                                 while ($row = $result1->fetch_assoc()) {
@@ -113,9 +113,9 @@ $result1 = $connexion->query($sql1);
                     ?>
                                     <div class="card" style="width: 30rem;">
                                         <div class="card-body">
-                                            <h5 class="card-title"><?= $row['id'] ?></h5>
-                                            <h5 class="card-title"><?= $row['nom'] ?></h5>
-                                            <p class="card-text"><?= $row['description'] ?></p>
+                                            <h5 class="card-title">id produit : <?= $row['id'] ?></h5>
+                                            <h5 class="card-title">nom de produit : <?= $row['nom'] ?></h5>
+                                            <p class="card-text">description deproduit : <?= $row['description'] ?></p>
                                             <div style="display: flex; gap:12px;">
                                                 <a style="width: fit-content; display:flex; align-items:center;" href="delete.php?id=<?= $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure do you want to delete this user?')">
                                                     <lord-icon src="https://cdn.lordicon.com/xekbkxul.json" trigger="hover" colors="primary:#121331,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef">

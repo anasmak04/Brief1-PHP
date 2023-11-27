@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
     if ($password !== $confirmPwd) {
         echo "Password does not match. Please try again.";
     } else {
-        $sql = "INSERT INTO `user` (`firstName`, `lastName`, `email`, `password`)
-                VALUES ('$firstName', '$lastName', '$email', '$password')";
+        $sql = "INSERT INTO `user` (`firstName`, `lastName`, `email`, `password`, `confirmPassword`)
+                VALUES ('$firstName', '$lastName', '$email', '$password' , '$confirmPwd')";
 
         $result = $connexion->query($sql);
         $path = "../login/signin.php";

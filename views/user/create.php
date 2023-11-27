@@ -7,16 +7,15 @@ if (isset($_POST['submit'])) {
     $lastName = mysqli_real_escape_string($connexion, $_POST['lastName']);
     $email = mysqli_real_escape_string($connexion, $_POST['email']);
     $password = mysqli_real_escape_string($connexion, $_POST['password']);
-    
 
-    $sql = "INSERT INTO `user` (`id`, `firstName`, `lastName`, `email`, `password`)
-            VALUES ('$id', '$firstName', '$lastName', '$email', '$password')";
+
+    $sql = "INSERT INTO `user` (`firstName`, `lastName`, `email`, `password`)
+            VALUES ('$firstName', '$lastName', '$email', '$password')";
 
     $result = $connexion->query($sql);
 
     if (isset($result)) {
         header("location:show.php");
-        
     } else {
         echo "Error: " . $connexion->error;
     }
@@ -42,13 +41,13 @@ if (isset($_POST['submit'])) {
 
     <div class="container mt-4">
 
-    <a href="show.php" class="btn btn-primary">view all users</a>
+        <a href="show.php" class="btn btn-primary">view all users</a>
 
         <h1 class="text-capitalize text-center">user management system </h1>
         <p class="text-capitalize text-center">insert a values from user</p>
         <form action="create.php" method="post">
             <div class="row">
-            
+
                 <div class="col">
                     <input type="text" name="firstName" class="form-control" placeholder="First name">
                 </div>

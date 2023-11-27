@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
 
 
 <body>
-    <h2>User Registration Form</h2>
+    <h2>User Login Form</h2>
 
     <form action="signin.php" method="post">
         <input type="text" name="email" required placeholder="enter your email"><br>
