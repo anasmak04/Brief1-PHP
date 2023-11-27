@@ -32,7 +32,7 @@ Startup Innovation est une startup visionnaire dédiée à fournir un soutien et
 - **Description**: Lucidchart est un outil basé sur le web pour créer des diagrammes UML et des organigrammes.
 - **Objectif**: Représentation visuelle et documentation de l'architecture, des relations et des flux de travail du projet.
 - **Ressources**:
-  - [Lucidchart](lien-vers-lucidchart) (En français)
+  - [Lucidchart](lien-vers-lucidchart) 
 
 ## 5. Les interfaces graphiques
 
