@@ -36,5 +36,17 @@ Startup Innovation est une startup visionnaire dédiée à fournir un soutien et
 
 ## 5. Les interfaces graphiques
 
+![signup](https://github.com/anasmak04/Brief1-PHP/assets/102997226/9c1f5178-fa5e-4fc3-a6d2-5c9efaee118b)
+
+![login](https://github.com/anasmak04/Brief1-PHP/assets/102997226/6f4faaa8-bac4-4541-b0a2-b01cbec9d48c)
+
+![dashbord](https://github.com/anasmak04/Brief1-PHP/assets/102997226/c6b89f0f-416c-4e1c-beef-5ddae3ba591b)
+
+![user](https://github.com/anasmak04/Brief1-PHP/assets/102997226/12f04e83-87fc-4196-9ba2-e4c70bee7a8f)
+
+![products](https://github.com/anasmak04/Brief1-PHP/assets/102997226/40688535-0fc6-440a-b70f-bb152b9285a2)
+
+![blogs](https://github.com/anasmak04/Brief1-PHP/assets/102997226/240ae853-64ed-4e39-ac26-a32eb99602a9)
+
 
 
